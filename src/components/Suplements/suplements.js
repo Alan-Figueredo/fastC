@@ -17,7 +17,7 @@ const Suplements =()=>{
                         <Form>
                             <input type="search" className="form-control" />
                             <Row className="mt-3">
-                            <div key={`inline-checkbox`} className=" d-flex justify-content-center">
+                            <div key={`inline-checkbox`} className=" d-flex">
                                 <div className="">
                                 <Form.Check
                                     inline
