@@ -1,42 +1,57 @@
-import React from "react";
+import React, { useState } from "react";
 import { Form, Row } from "react-bootstrap";
 import {BiBookmarkPlus} from "react-icons/bi";
 import "./suplements.scss"
 const Suplements =()=>{
-    const handleClick=()=>{
-
-    }
+    const [lapel, setLapel] = useState();
     return(
         <div className="content">
             <div className="align-items-center container-fluid  suplements justify-content-center mt-5 mx-5">
                 <Row>
-                    <div className="col-4 mt-3">
+                    <div className="col-3 mt-3">
                         <Row className="justify-content-center text-center">
-                            <button className="col lapelButton lapel">Search</button>
+                            <button className={`col lapelButton lapel`}>Search</button>
                             <button className="col lapelButton">Library</button>
                             <button className="col lapelButton">Index</button>
                         </Row>
                         <Form>
                             <input type="search" className="form-control" />
-                            <Row>
-                                <div className="col-1">
-                                    <input type="checkbox"/>
+                            <Row className="mt-3">
+                            <div key={`inline-checkbox`} className=" d-flex justify-content-center">
+                                <div className="">
+                                <Form.Check
+                                    inline
+                                    label="Articles"
+                                    name="articles"
+                                    type="checkbox"
+                                    id="articles"
+                                />
+                                <Form.Check
+                                    inline
+                                    label="Package"
+                                    name="package"
+                                    type="checkbox"
+                                    id="package"
+                                />
+                                <Form.Check
+                                    inline
+                                    label="Rules"
+                                    name="rules"
+                                    type="checkbox"
+                                    id="rules"
+                                />
                                 </div>
-                                <div className="col px-0">
-                                    <label htmlFor="">Articles</label>
+                                <div className="vertical-divider"></div>
+                                <div>
+                                <Form.Check
+                                    inline
+                                    label="Carriers"
+                                    name="carriers"
+                                    type="checkbox"
+                                    id="carriers"
+                                />
                                 </div>
-                                <div className="col-1">
-                                    <input type="checkbox"/>
-                                </div>
-                                <div className="col">
-                                    <label htmlFor="">Package</label>
-                                </div>
-                                <div className="col-1">
-                                    <input type="checkbox"/>
-                                </div>
-                                <div className="col">
-                                    <label htmlFor="">Rules</label>
-                                </div>
+                            </div>
                             </Row>
                         </Form>
                     </div>
@@ -55,7 +70,7 @@ const Suplements =()=>{
                     </div>
                 </Row>
                 <Row className="mt-5">
-                    <div className="col-4">
+                    <div className="col-3" id="colSuplements">
                         <Row className="align-items-center">
                             <div className="col-10">
                                 <a href="#" className="rulesH">Prueba</a>
