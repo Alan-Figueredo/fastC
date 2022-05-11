@@ -1,0 +1,64 @@
+.suplements{
+    background-color: #f5f6f8;
+    height: 75vh;
+    .borderButton{
+        border: 1px solid black;
+        background-color: white;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .suplementsDetail{
+        padding-right: 120px;
+    }
+    #date{
+        border: 1px solid black;
+        margin-right: 30px;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .rulesH{
+        text-decoration: underline;
+        color: rgb(230, 80, 122);
+        text-decoration-color: rgb(230, 80, 122);
+        font-weight: 400;
+        font-size: 26px;
+    }
+    .articlesH{
+        color: rgb(144, 144, 255);
+    }
+    .packageH{
+        color: rgb(95, 170, 89);
+    }
+    .detail{
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    .bookMark{
+        font-size: 23px
+    }
+    .hr{
+        border-top: 3px solid black;
+    }
+    .lapelButton{
+        background: none;
+        color: inherit;
+        border: none;
+        padding: 0;
+        font: inherit;
+        cursor: pointer;
+        outline: inherit;
+        margin-bottom: 15px;
+    }
+    .lapel{
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        padding-left: 0px;
+        padding-right: 0px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
