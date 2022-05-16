@@ -89,7 +89,7 @@ const navBar = () => {
     <div className={!toggle ? "nav-bar-closed navi-bar" : "nav-bar navi-bar"}>
       <div className="">
         <div className={!toggle ? "d-none" : ""}>
-          <span>Shipment Search</span>
+          <h1>Shipment Search</h1>
         </div>
         <div className={!toggle ? "d-none" : ""}>
           <span>Shipment number</span>
