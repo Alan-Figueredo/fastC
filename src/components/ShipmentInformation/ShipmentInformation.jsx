@@ -9,7 +9,7 @@ const ShipmentInformation =()=>{
     return(
         ShipInfo && ShipInfo.map(shipment =>{
             return(
-                <Card key={shipment.key} id="shipInfo" className="col mb-3">
+                <Card key={shipment.key} id="shipInfo" className="col mb-1">
                     <Row>
                         <div className="col-6">
                             <FontAwesomeIcon icon={faChartSimple} id="shipIcon"/>

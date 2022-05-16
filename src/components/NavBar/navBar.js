@@ -1,7 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { Link, useLocation } from "react-router-dom";
-import { Row, Tooltip } from "react-bootstrap";
+import { Row } from "react-bootstrap";
 import {
   FiMonitor,
   FiCalendar,
@@ -22,13 +21,8 @@ import "./navBar.scss";
 const navBar = () => {
   const toggle = useSelector((state) => state.topBar.toggle);
   console.log(localStorage);
-  const location = useLocation();
 
-  const renderTooltip = (props) => (
-    <Tooltip {...props}>
-      <strong>{props}</strong>
-    </Tooltip>
-  );
+
   const navigation = [
     {
       name: "Home",
