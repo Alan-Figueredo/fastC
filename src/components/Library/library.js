@@ -1,4 +1,4 @@
-import {BsPlus} from "react/icons/bs"
+import {BsPlus} from "react-icons/bs"
 const library =()=>{
     return(
         <div>
@@ -13,3 +13,4 @@ const library =()=>{
         </div>
     )
 }
+export default library

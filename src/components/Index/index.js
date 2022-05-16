@@ -11,6 +11,7 @@ import {
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FaSearch } from "react-icons/fa";
 import "./index.scss";
+import ManageShipments from "../Manage Shipments/ManageShipments";
 
 const index = () => {
   const toggle = useSelector((state) => state.topBar.toggle);
@@ -18,6 +19,9 @@ const index = () => {
     <div className="content">
       <div className="align-items-center container-fluid d-flex index justify-content-center">
         <div className="row">
+          <div>
+            <ManageShipments/>
+          </div>
           <div className="col-12 d-flex flex-wrap justify-content-center mt-3">
             <Tabs
               defaultActiveKey="search"

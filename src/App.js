@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { useSelector } from "react-redux";
 import Index from "./components/Index/index";
 import Dashboard from "./components/Dashboard/dashboard";
@@ -8,7 +8,6 @@ import NavBar from "./components/NavBar/navBar";
 import RightDrawer from "./components/RightDrawer/rightDrawer";
 import Footer from "./components/Footer/footer";
 import "./App.scss";
-import Suplements from "./components/Suplements/suplements";
 
 function App() {
   const toggle = useSelector((state) => state.topBar.toggle);
@@ -26,7 +25,6 @@ function App() {
           <Routes>
             <Route path="/" exac element={<Index />} />
             <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/suplements" element={<Suplements/>}/>
           </Routes>
         </div>
       </div>

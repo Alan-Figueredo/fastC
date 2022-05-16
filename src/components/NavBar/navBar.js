@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { Link, useLocation } from "react-router-dom";
-import { Nav, Dropdown, OverlayTrigger, Tooltip } from "react-bootstrap";
+import { Row, Tooltip } from "react-bootstrap";
 import {
   FiMonitor,
   FiCalendar,
@@ -89,54 +89,49 @@ const navBar = () => {
     <div className={!toggle ? "nav-bar-closed navi-bar" : "nav-bar navi-bar"}>
       <div className="">
         <div className={!toggle ? "d-none" : ""}>
-          <span>Navigation</span>
-          <Dropdown.Divider />
+          <span>Shipment Search</span>
         </div>
-        {navigation.map((item) => (
-          <Nav.Link
-            key={item.name}
-            className={
-              location.pathname === item.path ? "active-menu my-2" : "my-2"
-            }
-          >
-            <Link to={item.path} className="text-black-50">
-              <OverlayTrigger
-                placement="right"
-                delay={{ show: 10, hide: 200 }}
-                overlay={renderTooltip(item.name)}
-              >
-                <span>{item.icon}</span>
-              </OverlayTrigger>
-              <span className={!toggle ? "d-none" : "ms-2"}>{item.name}</span>
-            </Link>
-          </Nav.Link>
-        ))}
-      </div>
-      <div>
         <div className={!toggle ? "d-none" : ""}>
-          <span>Apps</span>
-          <Dropdown.Divider />
+          <span>Shipment number</span>
         </div>
-        {apps.map((item) => (
-          <Nav.Link
-            key={item.name}
-            className={
-              location.pathname === item.path ? "active-menu my-2" : "my-2"
-            }
-          >
-            <Link to={item.path} className="text-black-50">
-              <OverlayTrigger
-                placement="right"
-                delay={{ show: 10, hide: 200 }}
-                overlay={renderTooltip(item.name)}
-              >
-                <span>{item.icon}</span>
-              </OverlayTrigger>
-              <span className={!toggle ? "d-none" : "ms-2"}>{item.name}</span>
-            </Link>
-          </Nav.Link>
-        ))}
       </div>
+      <textarea rows="7" cols="25" className={!toggle ? "d-none" : "m-auto"} style={{overflowY: "scroll", resize: "none"}}></textarea>
+      <h2 className={!toggle ? "d-none" : ""}>Status</h2>
+      <Row className={!toggle ? "d-none" : ""}>
+          <div className='col-1'>
+              <input type="checkbox" className='mt-2' name=" Auto Tendered" id="AutoTendered" />
+          </div>
+          <div className='col'>
+              <label htmlFor="AutoTendered">AutoTendered</label>
+          </div>
+      </Row>
+      <Row className={!toggle ? "d-none" : ""}>
+          <div className='col-1'>
+              <input type="checkbox" className='mt-2' name="Closed" id="Closed" />
+          </div>
+          <div className='col'>
+              <label htmlFor="Closed">Closed</label>
+          </div>
+      </Row>
+      <Row className={!toggle ? "d-none" : ""}>
+          <div className='col-1'>
+              <input type="checkbox" className='mt-2 mb-3' name="BOL" id="BOL"/>
+          </div>
+          <div className='col'>
+              <label htmlFor="BOL">BOL</label>
+          </div>
+      </Row>
+
+      <label htmlFor="ShipDate" className={!toggle ? "d-none" : ""}>Ship Date</label>
+      <input type="text" name="ShipDate" id="ShipDate" className={!toggle ? "d-none" : ""}/>
+
+      <label htmlFor="CreatedDate" className={!toggle ? "d-none" : ""}>Created Date</label>
+      <input type="text" name="CreatedDate" id="CreatedDate" className={!toggle ? "d-none" : ""}/>
+
+      <label htmlFor="ShipmentTerms" className={!toggle ? "d-none" : ""}>Shipment Terms</label>
+      <select name="ShipmentTerms" id="ShipmentTerms" className={!toggle ? "d-none" : ""}>
+          <option value=""></option>
+      </select>
     </div>
   );
 };
