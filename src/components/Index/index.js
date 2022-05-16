@@ -18,9 +18,9 @@ import Shipments from "../Shipments/Shipments";
 const index = () => {
   const toggle = useSelector((state) => state.topBar.toggle);
   return (
-    <div className="content">
-      <div className=" container-fluid d-flex index justify-content-center">
-        <div className="row">
+    <div className="content" >
+      <div className=" container-fluid d-flex index" >
+        <div className="row" >
             <ShipmentInformation/>
           <div>
             <ManageShipments/>
