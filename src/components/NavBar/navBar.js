@@ -1,86 +1,15 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { Row } from "react-bootstrap";
-import {
-  FiMonitor,
-  FiCalendar,
-  FiMessageSquare,
-  FiShoppingCart,
-  FiUsers,
-  FiMail,
-  FiRss,
-  FiActivity,
-  FiBriefcase,
-  FiClipboard,
-  FiBook,
-  FiAperture,
-} from "react-icons/fi";
-import { FaHome } from "react-icons/fa";
 import "./navBar.scss";
 
 const navBar = () => {
   const toggle = useSelector((state) => state.topBar.toggle);
   console.log(localStorage);
 
-
-  const navigation = [
-    {
-      name: "Home",
-      path: "/",
-      icon: <FaHome className="mb-1" />,
-    },
-    {
-      name: "Dashboard",
-      path: "/dashboard",
-      icon: <FiMonitor className="mb-1" />,
-    },
-  ];
-
-  const apps = [
-    {
-      name: "Calendar",
-      path: "/calendar",
-      icon: <FiCalendar className="mb-1" />,
-    },
-    {
-      name: "Chat",
-      path: "/chat",
-      icon: <FiMessageSquare className="mb-1" />,
-    },
-    {
-      name: "Ecommerce",
-      path: "/ecommerce",
-      icon: <FiShoppingCart className="mb-1" />,
-    },
-    {
-      name: "CRM",
-      path: "/crm",
-      icon: <FiUsers className="mb-1" />,
-    },
-    {
-      name: "Email",
-      path: "/email",
-      icon: <FiMail className="mb-1" />,
-    },
-    {
-      name: "Social Feed",
-      path: "/social-feed",
-      icon: <FiRss className="mb-1" />,
-    },
-    {
-      name: "Companies",
-      path: "/companies",
-      icon: <FiActivity className="mb-1" />,
-    },
-    {
-      name: "Projects",
-      path: "/projects",
-      icon: <FiBriefcase className="mb-1" />,
-    },
-  ];
-
   return (
     <div className={!toggle ? "nav-bar-closed navi-bar" : "nav-bar navi-bar"}>
+      <span>Filters</span>
       <div className="">
         <div className={!toggle ? "d-none" : ""}>
           <h1>Shipment Search</h1>

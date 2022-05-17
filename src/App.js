@@ -23,7 +23,7 @@ function App() {
           }
         >
           <Routes>
-            <Route path="/" exac element={<Index />} />
+            <Route path="/" element={<Index />} />
             <Route path="/dashboard" element={<Dashboard />} />
           </Routes>
         </div>
